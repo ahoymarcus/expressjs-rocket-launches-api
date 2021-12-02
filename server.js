@@ -16,7 +16,7 @@ server.use(express.json());
 
 
 server.get('/', (req, res) => {
-	res.send('SpaceX');
+	res.send('Rocket-X Launches API');
 });
 
 
