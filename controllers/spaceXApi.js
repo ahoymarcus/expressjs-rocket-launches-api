@@ -1,14 +1,14 @@
 // CONTROLLERS
 
+const asyncWrapper = require('../middleware/async');
 
 // require API_helper.js
 const api_helper = require('../API_helper');
 
 
 // Get All Launches
-//const url = "https://api.spacexdata.com/v4/launches/";
-// Get Next Launch
-const nextLaunchUrl = "https://api.spacexdata.com/v4/launches/next";
+//const allLaunchesUrl = "https://api.spacexdata.com/v4/launches/";
+
 // Get Next Launches
 const nextLaunchesUrl = "https://api.spacexdata.com/v4/launches/upcoming";
 // Get Last Launch
@@ -18,17 +18,21 @@ const pastLaunchesUrl = "https://api.spacexdata.com/v4/launches/past";
 
 
 
-const getAllLaunches = async (req, res) => {
-	//res.status(200).send('getAllLaunches');
+const getAllLaunches = asyncWrapper( async (req, res) => {
+	// Get Next Launch URL
+	const nextLaunchUrl = "https://api.spacexdata.com/v4/launches/next";
 	
-	api_helper.make_API_call(url)
-		.then(response => {
-			res.json(response);
-		})
-		.catch(error => {
-			res.send(error);
-		});
-};
+	const data = await api_helper.make_API_call(nextLaunchUrl);
+	
+	res.status(200).json(data);
+});
+
+
+
+
+
+
+
 
 
 
