@@ -1,4 +1,4 @@
-require('dotenv').config;
+require('dotenv').config();
 const express = require('express');
 
 // login
@@ -17,7 +17,7 @@ server.use(express.json());
 
 server.get('/', (req, res) => {
 	res.send('Rocket-X Launches API');
-});
+}); 
 
 
 server.use('/api/v1/login', authRouter);
@@ -26,10 +26,10 @@ server.use('/api/v1/launches', launchesRouter);
 
 
 
-const  port = process.env.PORT || 3000;
+const port = process.env.PORT || 3000;
  
 server.listen(port, () => {
 	console.log(`Server listening at port ${port}`);
-}); 
+});  
 
 
