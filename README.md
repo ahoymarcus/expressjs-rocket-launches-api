@@ -65,4 +65,4 @@ As rotas foram construídas encima das seguintes URLs:
 <br />
 <br />
 
-[^1] John Smilga - Freecodecamp.org.
+
