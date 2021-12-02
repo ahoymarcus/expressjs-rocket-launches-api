@@ -1,37 +1,60 @@
 // CONTROLLERS
-// https://docs.microsoft.com/en-us/connectors/rspacexip/#get-past-launches
-// https://docs.microsoft.com/en-us/connectors/rspacexip/#get-latest-launch
-// https://docs.microsoft.com/en-us/connectors/rspacexip/#get-next-launch
-// https://docs.microsoft.com/en-us/connectors/rspacexip/#get-all-launches
-// https://github.com/r-spacex/SpaceX-API/blob/master/routes/launches/v4/index.js
-// https://codehandbook.org/how-to-make-rest-api-calls-in-express-web-app/
-//https://stackoverflow.com/questions/44903053/how-to-call-an-api-from-another-api-in-expressjs
+const asyncWrapper = require('../middleware/async');
+
+// require API_helper.js
+const api_helper = require('../API_helper');
 
 
 
 
-const url = "https://api.spacexdata.com/v4/launches/";
-
-
-
-const getNextLaunches = async (req, res) => {
+const getNextLaunch = asyncWrapper( async (req, res) => {
+	// Get Next Launch URL
+	const nextLaunchUrl = "https://api.spacexdata.com/v4/launches/next";
 	
-	res.status(200).send('getNextLaunches');
+	const data = await api_helper.make_API_call(nextLaunchUrl);
 	
-	// try {
-		// const response = await fetch(url);
-		// const launches = await response.json();
-		
-		// console.log(launches);
-		
+	res.status(200).json(data);
+});
+
+
+
+const getNextLaunches = asyncWrapper( async (req, res) => {
+	// Get Next Launches
+	const nextLaunchesUrl = "https://api.spacexdata.com/v4/launches/upcoming";
+
+	const data = await api_helper.make_API_call(nextLaunchesUrl);
 	
-	// } catch (error) {
-		// console.log(error);
-	// }
-};
+	res.status(200).json(data);
+});
+
+
+const getLastLaunch = asyncWrapper( async (req, res) => {
+	// Get Last Launch
+	const lastLaunchUrl = "https://api.spacexdata.com/v4/launches/latest";
+	
+	const data = await api_helper.make_API_call(lastLaunchUrl);
+	
+	res.status(200).json(data);
+});
+
+
+const getPastLaunches = asyncWrapper( async (req, res) => {
+	// Get Past Launches
+	const pastLaunchesUrl = "https://api.spacexdata.com/v4/launches/past";
+	
+	const data = await api_helper.make_API_call(pastLaunchesUrl);
+	
+	res.status(200).json(data);
+});
 
 
 
-module.exports = getNextLaunches
+
+module.exports = {
+	getNextLaunch,
+	getNextLaunches,
+	getLastLaunch,
+	getPastLaunches
+}
 
 
