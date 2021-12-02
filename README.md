@@ -21,15 +21,34 @@ Esse projeto começa, então, usando do módulo **Request** para realizar uma ch
 
 <br />
 
-### I:
 
-![Imagem da página Home do Cocktails App](/public/images/)
+### Imagem da requisição feita para a API externa **SpaceX REST API**:  
+
+![Imagem da requisição feita para a API externa SpaceX REST API](/public/images/express-fazendo-requisição-como-cliente.png)
 
 <br />
 
 ### I:
 
 ![Imagem da pagina /about construída com o pacote React-router-dom](/public/images/)
+
+<br />
+
+### I:
+
+![Imagem do sistema de busca feito na API de dados](/public/images/)
+
+<br />
+
+### I:
+
+![Imagem do sistema de busca feito na API de dados](/public/images/)
+
+<br />
+
+### I:
+
+![Imagem do sistema de busca feito na API de dados](/public/images/)
 
 <br />
 
