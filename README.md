@@ -56,42 +56,9 @@ As rotas foram construídas encima das seguintes URLs:
 <br />
 
 
-### Imagem da requisição feita para a API externa **SpaceX REST API**:  
+### Imagem da resposta para a rota /api/v1/spaceXApi/next:  
 
-![Imagem da requisição feita para a API externa SpaceX REST API](/public/images/express-fazendo-requisição-como-cliente.png)
-
-<br />
-
-### I:
-
-![Imagem da pagina /about construída com o pacote React-router-dom](/public/images/)
-
-<br />
-
-### I:
-
-![Imagem do sistema de busca feito na API de dados](/public/images/)
-
-<br />
-
-### I:
-
-![Imagem do sistema de busca feito na API de dados](/public/images/)
-
-<br />
-
-### I:
-
-![Imagem do sistema de busca feito na API de dados](/public/images/)
-
-<br />
-
-### I:
-
-![Imagem do sistema de busca feito na API de dados](/public/images/)
-
-<br />
-
+![Imagem da resposta de uma rota da api](/public/images/rocket-x-launches-api.png)
 
 
 
