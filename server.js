@@ -1,7 +1,8 @@
 require('dotenv').config;
 const express = require('express');
 
-const launchesRoute = require('./routes/spaceXApi');
+const spaceXRoute = require('./routes/spaceXApi');
+const launchesRoute = require('./routes/launches');
 
 
 const server = express();
@@ -16,6 +17,7 @@ server.get('/', (req, res) => {
 });
 
 
+server.use('/api/v1/spaceXApi', spaceXRoute);
 server.use('/api/v1/launches', launchesRoute);
 
 

@@ -9,28 +9,29 @@
 
 
 
-// require API_helper.js
-const api_helper = require('../API_helper');
-
 
 const url = "https://api.spacexdata.com/v4/launches/";
 
 
 
-const getAllLaunches = async (req, res) => {
-	//res.status(200).send('getAllLaunches');
+const getNextLaunches = async (req, res) => {
 	
-	api_helper.make_API_call(url)
-		.then(response => {
-			res.json(response);
-		})
-		.catch(error => {
-			res.send(error);
-		});
+	res.status(200).send('getNextLaunches');
+	
+	// try {
+		// const response = await fetch(url);
+		// const launches = await response.json();
+		
+		// console.log(launches);
+		
+	
+	// } catch (error) {
+		// console.log(error);
+	// }
 };
 
 
 
-module.exports = getAllLaunches
+module.exports = getNextLaunches
 
 
