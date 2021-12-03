@@ -12,7 +12,50 @@ O app consome dados da API **SpaceX REST API** para criar um pequeno serviço de
 
 <br />
 
-Esse projeto começa, então, usando do módulo **Request** para realizar uma chamada GET com o Express-JS na API Rest de origem dos dados e pegar todos os lançamentos realizados. 
+Ademais, existe um sistema mocado de autenticação para o uso das rotas que simula uma requisição de Login para poder utilizar as rotas de dados.
+
+<br />
+
+Desse modo, o usuário deve primeiramente realizar uma requizição POST para a URL:
+
+<br />
+
+```
+/api/v1/login
+```
+
+<br  />
+
+Passando no corpo da requisição um JSON com as propriedades **username** e **password**, para receber na resposta um token JWT (JSON Web Token):
+
+
+```
+{
+    "username": "john",
+    "password": "secret"
+}
+```
+
+<br />
+
+O token recebido na resposta da requisição POST deve ser copiado e colocado no cabeçalho das requisições GET para acessar as 04 rotas de dados:
+
+<br />
+
+```
+headers.authorization = 'Bearer <valor do token>';
+```
+
+<br />
+
+### Abaixo, temos um exemplo de requisição feita com o framework Postman:
+
+![Imagem da resposta de uma rota da api](/public/images/req-get-with-jwt-authentication.png)
+
+
+<br />
+
+O processo de requisição dos dados neste projeto começa, então, usando do módulo **Request** para realizar uma chamada GET com o Express-JS na API Rest de origem dos dados e pegar todos os lançamentos realizados. 
 
 <br />
 
@@ -61,6 +104,16 @@ As rotas foram construídas encima das seguintes URLs:
 ![Imagem da resposta de uma rota da api](/public/images/rocket-x-launches-api.png)
 
 
+<br />
+
+
+### Imagem da funcionaidade de autenticação para as rotas:  
+
+![Imagem da resposta de uma rota da api](/public/images/)
+
+
+
+<br />
 
 <br />
 <br />
