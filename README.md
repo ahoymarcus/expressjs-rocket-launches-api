@@ -99,7 +99,7 @@ As rotas foram construídas encima das seguintes URLs:
 <br />
 
 
-### Imagem da resposta para a rota /api/v1/spaceXApi/next:  
+### Imagem da resposta para a rota /api/v1/launches/next:  
 
 ![Imagem da resposta de uma rota da api](/public/images/rocket-x-launches-api.png)
 
@@ -107,9 +107,9 @@ As rotas foram construídas encima das seguintes URLs:
 <br />
 
 
-### Imagem da funcionaidade de autenticação para as rotas:  
+### Imagem de uma requisição feita para a rota GET /api/v1/launches/next com a passagem do token no cabeçalho e o retorno dos dados da API:  
 
-![Imagem da resposta de uma rota da api](/public/images/)
+![Imagem de uma requisição feita para a rota GET](/public/images/rocket-x-launches-api-02.png)
 
 
 

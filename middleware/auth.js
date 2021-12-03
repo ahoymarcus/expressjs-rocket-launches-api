@@ -11,10 +11,23 @@ const authenticationMiddlware = async (req, res, next) => {
 	
 	// 401 - Erro de Autenticação
 	if (!authHeader || !authHeader.startsWith('Bearer ')) {
-		return res.status(401).send('Acesso não permitido');
+		return res.status(401).send('No valid token provided');
 	}
 	
-	next();
+	const token = authHeader.split(' ')[1];
+	
+	try {
+		const decoded = jwt.verify(token, process.env.JWT_SECRET);
+		
+		console.log('decoded.....', decoded);
+		
+		const { id, username } = decoded;
+		req.user = { id, username };
+		
+		next();
+	} catch (err) {
+		return res.status(401).send('Access not authorized');
+	}
 };
 
 
