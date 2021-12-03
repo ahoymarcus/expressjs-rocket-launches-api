@@ -7,16 +7,16 @@ const {
 	getLastLaunch,
 	getPastLaunches
 } = require('../controllers/launches');
-
+const authMiddleware = require('../middleware/auth');
 
 
 const router = express.Router();
 
 
-router.get('/next', getNextLaunches);
-router.get('/next-list', getNextLaunches);
-router.get('/last', getLastLaunch);
-router.get('/past', getPastLaunches);
+router.get('/next', authMiddleware, getNextLaunches);
+router.get('/next-list', authMiddleware, getNextLaunches);
+router.get('/last', authMiddleware, getLastLaunch);
+router.get('/past', authMiddleware, getPastLaunches);
 
 
 

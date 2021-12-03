@@ -24,28 +24,28 @@ As rotas foram construídas encima das seguintes URLs:
 
 1. Próximo lançamento
 ```
-/api/v1/spaceXApi/next
+/api/v1/launches/next
 ```
 
 <br />
 
 2. Próximos lançamentos
 ```
-/api/v1/spaceXApi/next-list
+/api/v1/launches/next-list
 ```
 
 <br />
 
 3. Último lançamento
 ```
-/api/v1/spaceXApi/last
+/api/v1/launches/last
 ```
 
 <br />
 
 4. Lançamentos passados
 ```
-/api/v1/spaceXApi/past
+/api/v1/launches/past
 ```
 
 <br />
