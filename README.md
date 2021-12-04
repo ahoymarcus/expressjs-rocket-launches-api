@@ -3,12 +3,16 @@
 
 <br />
 
-O app consome dados da API **SpaceX REST API** para criar um pequeno serviço de dados, na forma de uma API que que disponibilizar rotas para os seguintes dados:
+A API consome dados de uma API externa, a API da **SpaceX REST API** para criar um pequeno serviço de dados, na forma de uma API REST que disponibiliza rotas para os seguintes dados da API externa:[^1]
 
 - Próximo lançamento;
 - Último lançamento;
 - Próximos lançamentos;
 - Lançamentos passados;
+
+<br />
+
+[SpaceX REST API - Github](https://github.com/r-spacex/SpaceX-API)
 
 <br />
 
@@ -118,4 +122,4 @@ As rotas foram construídas encima das seguintes URLs:
 <br />
 <br />
 
-
+[^1]:SpaceX REST API - Github 
