@@ -42,7 +42,8 @@ Passando no corpo da requisição um JSON com as propriedades **username** e **p
 
 <br />
 
-O token recebido na resposta da requisição POST deve ser copiado e colocado no cabeçalho das requisições GET para acessar as 04 rotas de dados:
+O token recebido na resposta da requisição POST é usado para se poder acessar os dados desta API.
+Caso seja usado alguma ferramenta de teste de requisições como Postman, o token deve ser copiado e colocado no cabeçalho das requisições GET para acessar as 04 rotas de dados:
 
 <br />
 
@@ -97,8 +98,11 @@ As rotas foram construídas encima das seguintes URLs:
 
 <br />
 
+Também foi utilizado a dependência Cors para Node-JS, para permitir testar a requisição no ambiente local!
 
-[]()
+<br />
+
+[SpaceX](https://www.spacex.com/)
 
 <br />
 
