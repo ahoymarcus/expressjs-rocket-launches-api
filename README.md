@@ -102,7 +102,7 @@ Também foi utilizado a dependência Cors para Node-JS, para permitir testar a r
 
 <br />
 
-[SpaceX](https://www.spacex.com/)
+[O site da empresa SpaceX](https://www.spacex.com/)
 
 <br />
 
