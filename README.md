@@ -12,7 +12,15 @@ A API consome dados de uma API externa, a API da **SpaceX REST API** para criar 
 
 <br />
 
-[SpaceX REST API - Github](https://github.com/r-spacex/SpaceX-API)
+Rocket-X Launches Apps:
+
+- API:
+
+[API na Heroku](https://nodejs-rocket-lauches-api.herokuapp.com/)
+
+- APP:
+
+[App em Netlify](https://reactjs-rocket-launches-app.netlify.app/)
 
 <br />
 
@@ -125,5 +133,7 @@ Também foi utilizado a dependência Cors para Node-JS, para permitir testar a r
 
 <br />
 <br />
+
+[SpaceX REST API - Github](https://github.com/r-spacex/SpaceX-API)
 
 [^1]:SpaceX REST API - Github 
