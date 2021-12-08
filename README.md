@@ -14,9 +14,10 @@ A API consome dados de uma API externa, a API da **SpaceX REST API** para criar 
 
 Rocket-X Launches Apps:
 
--[API na Heroku](https://nodejs-rocket-lauches-api.herokuapp.com/)
+- [API na Heroku](https://nodejs-rocket-lauches-api.herokuapp.com/)
 
 - [App em Netlify](https://reactjs-rocket-launches-app.netlify.app/)
+
 
 <br />
 
